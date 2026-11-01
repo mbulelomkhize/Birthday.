@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#171126">
+<meta name="color-scheme" content="dark">
+<title>For Noluthando ✨</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#ffb9d2;--lilac:#d7c2ff;--gold:#ffe3a3;--ink:#513c57;--serif:'Fraunces',Georgia,serif;--hand:'Caveat','Segoe Script',cursive}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;color-scheme:dark}
+body{margin:0;min-height:100vh;overflow-x:hidden;color:#fff;font-family:var(--serif);padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0);background:radial-gradient(ellipse at 15% 10%,#69447f 0,transparent 35%),radial-gradient(ellipse at 85% 80%,#813f70 0,transparent 36%),linear-gradient(145deg,#171126,#302044 55%,#1c142b);background-attachment:fixed}
+#sky{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.star{position:absolute;color:#fff3cf;animation:twinkle var(--dur) ease-in-out infinite;opacity:.5}
+@keyframes twinkle{0%,100%{opacity:.18;transform:scale(.7)}50%{opacity:1;transform:scale(1.35)}}
+.shoot{position:fixed;z-index:2;width:130px;height:2px;border-radius:2px;pointer-events:none;background:linear-gradient(90deg,transparent,#fff);transform:rotate(28deg);animation:shoot 1.3s ease-out forwards}
+@keyframes shoot{from{opacity:1;translate:0 0}to{opacity:0;translate:340px 180px}}
+.wrap{position:relative;z-index:1;width:min(860px,92%);margin:auto;padding:20px 0 50px}
+.hero{min-height:92vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:50px 8px 30px}
+.kicker{font-family:var(--hand);font-size:1.6rem;color:#f6d5e7}
+h1{font-weight:400;font-size:clamp(2.6rem,9vw,5.6rem);line-height:1;margin:14px 0 18px;font-variation-settings:'opsz' 144}
+.name{display:block;font-style:italic;font-size:1.28em;color:var(--pink);margin-top:6px}
+.name span{display:inline-block;opacity:0;transform:translateY(40px) rotate(8deg);animation:letter .8s cubic-bezier(.2,1.4,.4,1) forwards}
+@keyframes letter{to{opacity:1;transform:none;text-shadow:0 0 28px #ffb5d8aa}}
+.hero p{max-width:540px;line-height:1.8;color:#eee3f5;font-size:1.08rem}
+.btn{border:0;border-radius:99px;padding:14px 24px;margin:8px 5px;cursor:pointer;font:600 15px var(--serif);color:#382344;background:linear-gradient(110deg,#ffd2e3,#d9c9ff);box-shadow:0 8px 25px #0004;transition:transform .25s,filter .25s}
+.btn:hover{transform:translateY(-3px) scale(1.03);filter:brightness(1.07)}
+.ghost{background:#ffffff16;color:#fff;border:1px solid #ffffff55;box-shadow:none}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.panel{margin:26px 0;padding:clamp(24px,5vw,42px);border:1px solid #ffffff2e;border-radius:28px;background:#ffffff0d;backdrop-filter:blur(9px);text-align:center}
+.panel h2{font-weight:400;font-size:clamp(1.7rem,5vw,2.5rem);margin:0 0 12px}
+.panel p{color:#eee4f4;line-height:1.85;font-size:1.04rem}
+.pink{color:var(--pink)}
+.small{font-size:.95rem!important;color:#f4d9e9!important;font-style:italic}
+/* constellation */
+#sk{width:100%;max-width:560px;height:auto;display:block;margin:6px auto;touch-action:manipulation}
+.cs{cursor:pointer}
+.cs .core{fill:#fff3cf;opacity:.55;transition:.4s}
+.cs .halo{fill:#ffd9ef;opacity:.12;animation:pulse 2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes pulse{50%{transform:scale(1.5);opacity:.28}}
+.cs.on .core{opacity:1;fill:#fff;filter:drop-shadow(0 0 8px #ffc5e8)}
+.cs.on .halo{animation:none;opacity:.35}
+.ln{stroke:#ffd9ef;stroke-width:1.5;stroke-dasharray:200;stroke-dashoffset:200;transition:stroke-dashoffset 1s}
+.ln.on{stroke-dashoffset:0}
+#starmsg{min-height:4.2em;font-family:var(--hand);font-size:1.7rem;line-height:1.3;color:var(--gold);margin:6px 0}
+#count{font-size:.9rem;color:#d9c8e6}
+/* envelope */
+.env{position:relative;width:min(340px,86%);height:220px;margin:34px auto 0;cursor:pointer}
+.env .back,.env .front{position:absolute;inset:0;border-radius:6px}
+.env .back{background:#c690b8}
+.env .front{background:linear-gradient(135deg,#f4c3da 49.5%,transparent 50%) left/51% 100% no-repeat,linear-gradient(225deg,#e9b0cf 49.5%,transparent 50%) right/51% 100% no-repeat,linear-gradient(to top,#f9d5e5 55%,transparent 55%);z-index:3}
+.flap{position:absolute;left:0;right:0;top:0;height:120px;background:#d9a1c4;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .7s;z-index:4}
+.seal{position:absolute;left:50%;top:92px;translate:-50% 0;z-index:5;font-size:30px;transition:opacity .3s}
+.env.open .flap{transform:rotateX(180deg);z-index:1}
+.env.open .seal{opacity:0}
+.env .paper{position:absolute;left:5%;right:5%;top:8px;bottom:8px;z-index:2;background:#fff8fc;border-radius:8px;transition:transform 1s .5s}
+.env.open .paper{transform:translateY(-70px);z-index:2}
+#letter{display:none;margin-top:30px}
+.paper2{background:#fff8fc;color:var(--ink);border-radius:18px;padding:26px 28px;text-align:left;box-shadow:inset 0 0 35px #f6dce9}
+.paper2 p{font-family:var(--hand);font-size:1.5rem;line-height:1.5;color:#59455d;margin:0 0 .6em;min-height:1.5em}
+.paper2 .sign{text-align:right;color:#a34f83}
+/* cake */
+.cake{height:190px;width:230px;margin:30px auto 8px;position:relative}
+.cakebase{position:absolute;bottom:0;left:15px;width:200px;height:90px;border-radius:12px 12px 20px 20px;background:linear-gradient(90deg,#d985ad,#ffd1e1 50%,#d985ad);box-shadow:0 13px 28px #08031377}
+.icing{position:absolute;bottom:72px;left:15px;width:200px;height:36px;border-radius:14px 14px 50% 50%;background:#fff0f6}
+.drips{position:absolute;bottom:54px;left:44px;width:13px;height:26px;border-radius:0 0 9px 9px;background:#fff0f6;box-shadow:48px 8px #fff0f6,96px -2px #fff0f6,142px 5px #fff0f6}
+.candle{position:absolute;z-index:3;bottom:106px;width:10px;height:46px;border-radius:4px;background:repeating-linear-gradient(135deg,#fff 0 6px,#c5a3ff 6px 11px);cursor:pointer;border:0;padding:0}
+.candle:nth-of-type(1){left:70px}.candle:nth-of-type(2){left:110px;height:54px}.candle:nth-of-type(3){left:150px}
+.flame{position:absolute;left:-4px;top:-26px;width:18px;height:27px;border-radius:50% 50% 45% 45%;background:radial-gradient(ellipse at 50% 70%,#fff9b4 0 20%,#ffc45d 45%,#ff7b79 78%);filter:drop-shadow(0 0 11px #ffbd59);animation:flicker .55s infinite alternate}
+@keyframes flicker{to{transform:rotate(-8deg) scale(.86)}}
+.candle.out .flame{display:none}
+.puff{position:absolute;top:-30px;left:-4px;width:16px;height:16px;border-radius:50%;background:#ffffff66;filter:blur(4px);animation:puff 1.6s ease-out forwards;pointer-events:none}
+@keyframes puff{to{transform:translate(12px,-60px) scale(3);opacity:0}}
+/* wish */
+.wishrow{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+#wishin{flex:1 1 220px;max-width:340px;padding:13px 18px;border-radius:99px;border:1px solid #ffffff55;background:#ffffff14;color:#fff;font:16px var(--serif)}
+#wishin::placeholder{color:#d9c8e6}
+.wishtext{position:fixed;left:50%;z-index:20;font-family:var(--hand);font-size:1.8rem;color:var(--gold);pointer-events:none;text-shadow:0 0 14px #ffd36b;animation:wishup 3.4s ease-in forwards;white-space:nowrap;max-width:90vw;overflow:hidden;text-overflow:ellipsis}
+@keyframes wishup{from{opacity:1;transform:translate(-50%,0) scale(1)}to{opacity:0;transform:translate(-50%,-70vh) scale(.2)}}
+footer{text-align:center;padding:30px 0 10px;color:#cbbbd9;font-size:.95rem}
+.float{position:fixed;bottom:-55px;z-index:5;pointer-events:none;animation:floatUp var(--time) linear forwards}
+@keyframes floatUp{to{transform:translateY(-115vh) translateX(var(--drift)) rotate(35deg);opacity:0}}
+.confetti{position:fixed;top:-15px;z-index:10;pointer-events:none;width:8px;height:13px;border-radius:2px;animation:fall var(--time) linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(760deg);opacity:.15}}
+.trail{position:fixed;z-index:9;pointer-events:none;color:#ffe3f1;font-size:14px;animation:tr .8s forwards}
+@keyframes tr{to{opacity:0;transform:translateY(18px) scale(.3)}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-iteration-count:1!important;transition-duration:.01s!important}}
+</style>
+</head>
+<body>
+<div id="sky"></div>
+<main class="wrap">
+  <section class="hero">
+    <div class="kicker">somebody made you a little universe</div>
+    <h1>Happy Birthday,<span class="name" id="nm" aria-label="Noluthando">Noluthando</span></h1>
+    <p>Tonight the stars are showing off, because someone wonderful is celebrating another beautiful year. ✨</p>
+    <button class="btn" onclick="go('env');celebrate()">Step into your sky ✨</button>
+  </section>
+
+  <section class="panel">
+    <h2>A letter for you 💌</h2>
+    <p class="small">Tap the envelope to open it.</p>
+    <div class="env" id="env" role="button" tabindex="0" aria-label="Open your letter">
+      <div class="back"></div><div class="paper"></div><div class="front"></div><div class="flap"></div><div class="seal">💜</div>
+    </div>
+    <div id="letter"><div class="paper2" id="lp"></div></div>
+  </section>
+
+  <section class="panel">
+    <h2>Make a wish, birthday girl 🎂</h2>
+    <p class="small">Tap each candle to blow it out. Then close your eyes and wish.</p>
+    <div class="cake">
+      <button class="candle" aria-label="Blow out candle 1"><div class="flame"></div></button>
+      <button class="candle" aria-label="Blow out candle 2"><div class="flame"></div></button>
+      <button class="candle" aria-label="Blow out candle 3"><div class="flame"></div></button>
+      <div class="icing"></div><div class="drips"></div><div class="cakebase"></div>
+    </div>
+    <p id="wish" class="small" aria-live="polite">Three little flames are waiting for you.</p>
+    <button class="btn ghost" onclick="tune()">Play the birthday song 🎵</button>
+  </section>
+
+  <section class="panel">
+    <h2>Send your wish to the stars 🌠</h2>
+    <p class="small">Type it in. It floats away and becomes a shooting star. It isn’t saved anywhere, it stays between you and the sky.</p>
+    <div class="wishrow">
+      <input id="wishin" maxlength="80" placeholder="I wish for…" aria-label="Your wish">
+      <button class="btn" onclick="sendWish()">Send it up</button>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2 class="pink">Here’s to your next chapter 🌷</h2>
+    <p>More growth. More joy. More adventures. More beautiful memories. And above all, more moments that remind you how special life can be.</p>
+    <p><strong>Have the most magical birthday!</strong></p>
+    <button class="btn" onclick="celebrate()">Make it rain birthday magic 🎉</button>
+    <button class="btn ghost" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to the beginning ↑</button>
+  </section>
+  <footer>Made with friendship, warm wishes and a little magic ✦</footer>
+</main>
+<script>
+const $=id=>document.getElementById(id),go=id=>$(id).scrollIntoView({behavior:'smooth'});
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+// sky
+const sky=$('sky');
+for(let i=0;i<90;i++){const s=document.createElement('span');s.className='star';s.textContent=Math.random()>.5?'✦':'·';s.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;font-size:${8+Math.random()*15}px;animation-delay:${Math.random()*4}s`;s.style.setProperty('--dur',(1.5+Math.random()*3)+'s');sky.appendChild(s)}
+// name letters
+$('nm').textContent='';
+[...'Noluthando'].forEach((c,i)=>{const s=document.createElement('span');s.textContent=c;s.style.animationDelay=(.4+i*.09)+'s';s.setAttribute('aria-hidden','true');$('nm').appendChild(s)});
+// effects
+function shoot(x,y){const e=document.createElement('i');e.className='shoot';e.style.left=(x??Math.random()*60)+'vw';e.style.top=(y??Math.random()*40)+'vh';document.body.appendChild(e);setTimeout(()=>e.remove(),1400)}
+setInterval(()=>{if(!rm&&Math.random()<.5)shoot()},4500);
+function floaty(sym){const e=document.createElement('span');e.className='float';e.textContent=sym;e.style.left=Math.random()*100+'vw';e.style.fontSize=(17+Math.random()*19)+'px';e.style.setProperty('--time',(6+Math.random()*5)+'s');e.style.setProperty('--drift',(Math.random()*130-65)+'px');document.body.appendChild(e);setTimeout(()=>e.remove(),11500)}
+if(!rm)setInterval(()=>floaty(['💗','🦋','✨','🌸','💜','🎈'][Math.floor(Math.random()*6)]),800);
+function celebrate(){if(rm)return;for(let i=0;i<90;i++)setTimeout(()=>{const c=document.createElement('i');c.className='confetti';c.style.left=Math.random()*100+'vw';c.style.background=['#ffc3dc','#d8c2ff','#ffe6a8','#fff','#ee91bd'][Math.floor(Math.random()*5)];c.style.setProperty('--time',(2.5+Math.random()*2.8)+'s');document.body.appendChild(c);setTimeout(()=>c.remove(),5500)},i*13)}
+let lt=0;addEventListener('pointermove',e=>{if(rm||Date.now()-lt<60)return;lt=Date.now();const t=document.createElement('i');t.className='trail';t.textContent='✦';t.style.left=e.clientX+'px';t.style.top=e.clientY+'px';document.body.appendChild(t);setTimeout(()=>t.remove(),800)});
+// constellation
+// letter
+const L=['Dear Noluthando,','On your special day, I just want to wish you all the happiness this world has to offer. I hope life surprises you in the most beautiful ways, that your efforts turn into achievements, and that your dreams slowly become your reality.','May you always have reasons to laugh until your cheeks hurt, people who genuinely care, and strength for the days that test you. May you never doubt that you deserve good things.','Thank you for being a wonderful friend. Enjoy every moment of your day: take pictures, make memories, eat that extra slice of cake and let yourself be celebrated!','Happy birthday once again! 💜'];
+let opened=false;
+async function openLetter(){if(opened)return;opened=true;$('env').classList.add('open');celebrate();await new Promise(r=>setTimeout(r,1300));$('letter').style.display='block';$('letter').scrollIntoView({behavior:'smooth',block:'center'});
+for(let i=0;i<L.length;i++){const p=document.createElement('p');if(i===L.length-1)p.className='sign';$('lp').appendChild(p);for(const ch of L[i]){p.textContent+=ch;if(!rm)await new Promise(r=>setTimeout(r,i===1||i===2?14:22))}}}
+$('env').addEventListener('click',openLetter);$('env').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLetter()}});
+// cake + melody
+let ac;const SEMI=[[0,.75],[0,.25],[2,1],[0,1],[5,1],[4,2],[0,.75],[0,.25],[2,1],[0,1],[7,1],[5,2],[0,.75],[0,.25],[12,1],[9,1],[5,1],[4,1],[2,1],[10,.75],[10,.25],[9,1],[5,1],[7,1],[5,2]];
+function tune(){try{ac=ac||new (window.AudioContext||window.webkitAudioContext)();let t=ac.currentTime+.05;SEMI.forEach(([s,b])=>{const o=ac.createOscillator(),g=ac.createGain();o.type='triangle';o.frequency.value=261.63*Math.pow(2,s/12);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.18,t+.03);g.gain.exponentialRampToValueAtTime(.001,t+b*.42-.02);o.connect(g).connect(ac.destination);o.start(t);o.stop(t+b*.42);t+=b*.42})}catch(e){}}
+const cs=[...document.querySelectorAll('.candle')];
+cs.forEach(c=>c.addEventListener('click',()=>{if(c.classList.contains('out'))return;c.classList.add('out');const p=document.createElement('i');p.className='puff';c.appendChild(p);const left=cs.filter(x=>!x.classList.contains('out')).length;
+$('wish').textContent=left?(left+(left===1?' flame left…':' flames left…')):'Wish made! May beautiful things come looking for you. 🌟';if(!left){celebrate();tune()}}));
+// wish
+function sendWish(){const v=$('wishin').value.trim();if(!v){$('wishin').focus();return}const w=document.createElement('div');w.className='wishtext';w.textContent=v;w.style.top='60vh';document.body.appendChild(w);setTimeout(()=>w.remove(),3500);
+for(let i=0;i<4;i++)setTimeout(()=>shoot(Math.random()*70,Math.random()*30),i*350);$('wishin').value='';$('wishin').placeholder='Sent! Make another one?'}
+$('wishin').addEventListener('keydown',e=>{if(e.key==='Enter')sendWish()});
+</script>
+</body>
+</html>
